@@ -41,16 +41,15 @@ class StreamForm extends React.Component {
 
 const validate = (formValues) => {
     const errors = {};
+
     if (!formValues.title) {
         errors.title = 'Required'
-    } else if (formValues.title.length> 15) {
-        errors.title = 'Must be 15 characters or less'
     }
+
     if (!formValues.description) {
         errors.description = 'Required'
-    } else if (formValues.description.length > 20) {
-        errors.description = 'Must be 20 characters or less'
     }
+
     return errors
 };
 
