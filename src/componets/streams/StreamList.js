@@ -27,7 +27,7 @@ class StreamList extends React.Component {
                     {this.renderAdmin(stream)}
                     <i className="large middle aligned icon camera" />
                     <div className="content">
-                        <h4 className="ui header">{stream.title}</h4>
+                        <Link to={`/streams/${stream.id}`} className="ui header">{stream.title}</Link>
                         <div className="description">
                             {stream.description}
                         </div>
@@ -60,7 +60,7 @@ class StreamList extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         streams: Object.values(state.streams),
         currentUserId: state.auth.userId,
